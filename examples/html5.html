@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Video.js Resolution Switcher</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../node_modules/video.js/dist/video-js.css" rel="stylesheet">
-  <link href="../lib/videojs-resolution-switcher.css" rel="stylesheet">
+  <link href="./node_modules/video.js/dist/video-js.css" rel="stylesheet">
+  <link href="./node_modules/videojs-resolution-switcher/lib/videojs-resolution-switcher.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -46,11 +46,11 @@
   </video>
   
 
-  <script src="../node_modules/video.js/dist/video.js"></script>
+  <script src="./node_modules/video.js/dist/video.js"></script>
   <script>
-    videojs.options.flash.swf = "../node_modules/video.js/dist/video-js.swf"
+    videojs.options.flash.swf = "./node_modules/video.js/dist/video-js.swf"
   </script>
-  <script src="../lib/videojs-resolution-switcher.js"></script>
+  <script src="./node_modules/videojs-resolution-switcher/lib/videojs-resolution-switcher.js"></script>
   <script>
     // fire up the plugin
     videojs('video', {
@@ -59,7 +59,6 @@
       width: 1000,
       plugins: {
         videoJsResolutionSwitcher: {
-          ui: true,
           default: 'low', // Default resolution [{Number}, 'low', 'high'],
           dynamicLabel: true // Display dynamic labels or gear symbol
         }
